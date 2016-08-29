@@ -1,0 +1,13 @@
+{
+  "name": "billing",
+  "authors": [
+    "Nawaz Bhai"
+  ],
+  "description": "To manage house-hold utility bills",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "ui-router#^0.3.1"
+  }
+}
