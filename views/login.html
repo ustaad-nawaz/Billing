@@ -1,1 +1,53 @@
-<h1>LOGIN PAGE</h1>
+<!-- Container #1 (see wireframe) -->
+<md-toolbar layout="row" class="md-toolbar-tools">
+  <md-button class="menu md-icon-button" hide-gt-sm ng-click="toggleList()"
+             aria-label="Show User List">
+  </md-button>
+  <h1>Login for your billing information</h1>
+</md-toolbar>
+<!-- Container #2 -->
+<div flex layout="row">
+<!-- Container #3 -->
+  <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')"
+              md-component-id="left" ng-click="toggleList()"> Hello
+    <!-- Custom UsersList component -->
+    <users-list
+        users="app.users"
+        selected="app.selected"
+        on-selected="app.selectUser(user)">
+    </users-list> 
+  </md-sidenav>
+
+  <!-- Container #4 -->
+<md-content flex id="content">
+  <!-- Custom UserDetails component -->
+  <user-details selected="app.selected" >
+			<div class="loginForm">
+				<div layout="column" layout-align="center center" layout-fill class="inlineDisplay main">
+				  <div class="loginBox md-whiteframe-z1" layout="column">
+				    <md-toolbar>
+				      <h2 class="md-toolbar-tools">
+				        <span> Login </span>
+				      </h2>
+				    </md-toolbar>
+				    <md-content class="md-padding" layout="column">
+				      <md-input-container>
+				        <label class="primaryAccent"> EmailAddress </label>
+				        <input type="email" ng-model="defaults.user.name" class="primaryAccent"/>
+				      </md-input-container>
+				      <md-input-container>
+				        <label> Password </label>
+				        <input type="password" ng-model="defaults.user.pass" />
+				      </md-input-container>
+						</md-content>
+				    <div layout="row" layout-align="center center" style="padding-top:20px;">
+				      <md-button class="md-raised md-primary" ng-click="printText()"> Login </md-button>
+				      <div flex>
+				      	<md-button href="" md-no-ink> Forgot Password </md-button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>					
+  </user-details>
+</md-content></div>

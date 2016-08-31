@@ -3,20 +3,28 @@
 var app = angular
 	
 	.module('billing', [		// add name for your app (this should be same as in bower.json)
-		// 'ngMaterial',			// add modules here and their js files in index.html to use them
+		'ngMaterial',			// add modules here and their js files in index.html to use them
 		'ui.router'
 	])
 
 	.config([					// creating a model to define screens for your app
 		'$urlRouterProvider',	// add Provider libraries to define state/url of your screens
+		'$mdThemingProvider',
 		'$stateProvider',
 		function (
 			$urp,
+			$myTheme,
 			$sp) {
 
 				// special cases (un comment them to use as needed)
 				// $urp.when('/someOneTypesSomething','/redirectThemHere');
 				$urp.otherwise('/login');
+
+				// Themes
+				$myTheme.theme('default')
+				    .primaryPalette('blue')
+				    .accentPalette('orange')
+				    .dark();
 
 				// defining screens here
 				$sp.state('base', {

@@ -2,14 +2,33 @@
 <html>
 	<head>
 		<title></title>
+
+		<!-- Meta -->
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="description" content="">
+	    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+		<!-- Add all css here -->
+		<!-- <link rel="stylesheet" href="assets/css/normalize.css"> -->
+    	<link rel="stylesheet" href="assets/css/style.css">
+    	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="assets/css/mobile(768).css">
+    	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 480px), only screen and (min-device-width: 480px)" href="assets/css/non-mobile.css">
+    	<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+
+    	<!-- icons -->
+    	<link rel="stylesheet" type="text/css" href="bower_componenets/material-design-icons/iconfont/material-icons.css">
 	</head>
 	<body ng-app="billing">
 		<!-- this div will act upon the screens defined in app.js -->
 		<div ui-view></div>
 
 		<!-- add modules js here -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	    <script src="bower_components/angular/angular.js"></script>
+	    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	    <script src="bower_components/angular-material/angular-material.js"></script>
+	    <script src="bower_components/angular-aria/angular-aria.js"></script>
+	    <script src="bower_components/angular-animate/angular-animate.js"></script>
 		<!-- end -->
 
 		<script src="app.js"></script>
